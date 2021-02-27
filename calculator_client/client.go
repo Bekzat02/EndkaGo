@@ -10,7 +10,6 @@ import (
 	"time"
 )
 
-/////
 func PrimeComposition(c calculatorpb.CalculatorServiceClient) {
 	ctx := context.Background()
 	req := &calculatorpb.NumberRequest{
@@ -31,7 +30,7 @@ LOOP:
 				// we've reached the end of the stream
 				break LOOP
 			}
-			log.Fatalf("error while reciving from GreetManyTimes RPC %v", err)
+			log.Fatalf("error while reciving from PrimeComposition RPC %v", err)
 		}
 		log.Printf("response from GreetManyTimes:%v \n", res.GetResult())
 	}

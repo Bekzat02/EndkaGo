@@ -50,7 +50,7 @@ func (s *Server) PrimeNumberDecomposition(req *calculatorpb.NumberRequest, strea
 	for i := 0; i < len(arr); i++ {
 		res := &calculatorpb.CalculatorResponse{Result: fmt.Sprintf("Baby : %v\n", arr[i])}
 		if err := stream.Send(res); err != nil {
-			log.Fatalf("error while sending greet many times responses: %v", err.Error())
+			log.Fatalf("error while sending primeNumberServer many times responses: %v", err.Error())
 		}
 		time.Sleep(time.Second)
 	}
