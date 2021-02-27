@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-//
+/////
 func PrimeComposition(c calculatorpb.CalculatorServiceClient) {
 	ctx := context.Background()
 	req := &calculatorpb.NumberRequest{
