@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-
+//
 
 type Server struct {
 	calculatorpb.UnimplementedCalculatorServiceServer
@@ -31,7 +31,6 @@ func Factors(n int) (pfs []int) {
 		n = n / 2
 	}
 	for i := 3; i*i <= n; i = i + 2 {
-		// while i divides n, append i and divide n
 		for n%i == 0 {
 			pfs = append(pfs, i)
 			n = n / i
@@ -43,7 +42,6 @@ func Factors(n int) (pfs []int) {
 	return
 }
 
-//Structure
 func (s *Server) PrimeNumberDecomposition(req *calculatorpb.NumberRequest, stream calculatorpb.CalculatorService_PrimeNumberDecompositionServer) error {
 	fmt.Printf("GreetManyTimes function was invoked with %v \n", req)
 	number := req.GetNumber()

@@ -9,6 +9,8 @@ import (
 	"log"
 	"time"
 )
+
+//
 func PrimeComposition(c calculatorpb.CalculatorServiceClient) {
 	ctx := context.Background()
 	req := &calculatorpb.NumberRequest{
@@ -71,7 +73,6 @@ func getAverage(c calculatorpb.CalculatorServiceClient) {
 	}
 	fmt.Printf("ComputeAverage Response: %v\n", res)
 }
-
 
 func main() {
 	fmt.Println("Hi baby im u client")
