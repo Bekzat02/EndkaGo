@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package endtermPrimeCompostion;
+
+option go_package = "github.com\\Bekzat02\\EndkaGo\\calculatorpb;calculatorpb";
+
+service CalculatorService{
+  rpc PrimeNumberDecomposition(NumberRequest) returns(stream CalculatorResponse) {}
+  rpc ComputeAverage(stream NumbersRequest) returns(AverageResponse) {}
+}
+
+
+message NumberRequest{
+ int64 number= 1;
+}
+
+message CalculatorResponse{
+  string result = 1;
+}
+
+message NumbersRequest{
+  int64 numbers = 1;
+}
+
+message AverageResponse{
+  double result = 1;
+}
+

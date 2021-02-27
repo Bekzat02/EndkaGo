@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  client:
+    build:
+      context: /calculator_client
+    ports:
+      - 6666:6666
+    depends_on:
+      - server
+  server:
+    build:
+      context: /calculator_server
+    ports:
+      - 6666:6666
+
